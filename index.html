@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+    <title>Gabe's JavaScript Calculator!</title>
+</head>
+<body class="body">
+    <div class="calc">
+        <div class="display">
+            <h2 class="displayDigits"></h2>
+            <h1 class="displayResult">00000000</h1>
+        </div>
+
+        <div class="buttons">
+            <div class="actions">
+                <button type="button" class="btn btn-danger clear">CLEAR</button>
+            </div>
+            <div class="numbers">
+                <button type="button" class="btn btn-light num">1</button>
+                <button type="button" class="btn btn-light num">2</button>
+                <button type="button" class="btn btn-light num">3</button>
+                <button type="button" class="btn btn-light num">4</button>
+                <button type="button" class="btn btn-light num">5</button>
+                <button type="button" class="btn btn-light num">6</button>
+                <button type="button" class="btn btn-light num">7</button>
+                <button type="button" class="btn btn-light num">8</button>
+                <button type="button" class="btn btn-light num">9</button>
+                <button type="button" class="btn btn-light num">0</button>
+            </div>
+            <div class="operators">
+                <button type="button" class="btn btn-primary op">+</button>
+                <button type="button" class="btn btn-primary op">-</button>
+                <button type="button" class="btn btn-primary op">x</button>
+                <button type="button" class="btn btn-primary op">/</button>
+                <button type="button" class="btn btn-primary equals">=</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
