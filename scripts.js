@@ -61,22 +61,31 @@ function treatDecimal(a){
     return a;
 }
 
+function treatNumberInput(){
+    //Is there a number before the new operator?
+    if(displayDigits.textContent == ''){
+        a = displayResult.textContent;
+        displayDigits.textContent += a;
+        return a;
+    }
+    else
+        return treatDecimal(displayDigits.textContent);
+}
+
+function addOperatorDisplay(operator){
+    displayDigits.textContent +=  ' ' + operator + ' ';
+}
+
 function updateDisplayOp(op){
 
-    
     if(displayDigits.textContent.length > 13)
         return alert("Maximum number of digits reached.");
-
+    
     if(!hasOperator){
-        
-        if(displayDigits.textContent == ''){
-            a = displayResult.textContent;
-            displayDigits.textContent += a;
-        }
-        else
-            a = treatDecimal(displayDigits.textContent);
+
+        a = treatNumberInput();
             
-        displayDigits.textContent +=  ' ' + op.textContent + ' ';
+        addOperatorDisplay(op.textContent);
 
         //Update flags
         hasOperator = true;
@@ -84,6 +93,7 @@ function updateDisplayOp(op){
         //Enables back decimals
         enableDecimal();
     }
+    //If it does have an operator already, we need to solve the current operation first
     else {
 
         b = getB(a);
@@ -94,9 +104,9 @@ function updateDisplayOp(op){
             realizeOperation(a, b);
         //Updates to new display content
         a = treatDecimal(displayResult.textContent);
-        console.log(a);
 
-        displayDigits.textContent = a + ' ' + op.textContent + ' ';
+        addOperatorDisplay(op.textContent);
+        
         selectedOperation = op.textContent;
         hasOperator = true;
         enableDecimal();
