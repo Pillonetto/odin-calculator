@@ -103,7 +103,7 @@ function updateDisplayOp(op){
         if(displayDigits.textContent != '')
             realizeOperation(a, b);
         //Updates to new display content
-        a = treatDecimal(displayResult.textContent);
+        a = treatNumberInput(displayResult.textContent);
 
         addOperatorDisplay(op.textContent);
         
