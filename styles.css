@@ -74,6 +74,7 @@
 .operators{
     display: flex;
     justify-content: space-around;
+    gap: 2%;
 }
 
 .btn-light, .btn-primary {
