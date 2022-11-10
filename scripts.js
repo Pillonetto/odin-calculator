@@ -125,6 +125,8 @@ function realizeOperation(a, b){
     
     if(b.length == 0 || a.length == 0)
         return alert('Invalid Operation!');
+    if(a === '.' || b ==='.')
+        return alert('Invalid Operation!');
     
     a = parseFloat(a);
     b = parseFloat(b);
